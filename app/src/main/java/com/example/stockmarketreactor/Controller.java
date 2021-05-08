@@ -1,37 +1,31 @@
 package com.example.stockmarketreactor;
 
 import android.app.Application;
-import android.os.Build;
 
-import androidx.annotation.RequiresApi;
-
+import org.springframework.beans.factory.annotation.Autowired;
 
 import reactor.core.publisher.Flux;
 import reactor.netty.http.client.HttpClient;
+import reactor.netty.resources.ConnectionProvider;
 
-import static java.time.Duration.ofSeconds;
-import static reactor.util.retry.Retry.backoff;
 
 public class Controller extends Application {
 
 
-    private HttpClient webClient;
+   // HttpClient webClient = HttpClient.create(ConnectionProvider.create("http://localhost:8080"));
 
-    public Controller(HttpClient webClient){
-        this.webClient = webClient;
-    }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public Flux<Wallet> pricesFor(Wallet wallet){
+    /*
 
+    public Flux<Wallet> findWallet(String name)
+    {
         return webClient.get()
-                .uri("http://localhost:8080/algo/wallet/{address}", wallet.getAddress())
-                .bodyToFlux(Wallet.class)
-                .retryWhen(backoff(5, ofSeconds(1)).maxBackoff(ofSeconds(20));
-
+                .uri("algo/wallet/" + name)
+                .retrieve()
+                .bodyToFlux(Wallet.class);
     }
 
-
+*/
 
 
 }
