@@ -1,43 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IndexView">
-
+    tools:context=".IndexView"
+>
 
     <TextView
+        android:id="@+id/accountHeaderTextView"
         android:layout_width="wrap_content"
-        android:text="@string/app_name"
+        android:layout_height="70dp"
+        android:text="@string/stats_title"
         android:textSize="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="141dp"
-        tools:ignore="MissingConstraints"
-        android:layout_height="70dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/algoAdressEditText"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/blockchain_activity_view"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:hint="@string/algoAddress"
-        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="284dp" />
-
-    <Button
-        android:id="@+id/searchWalletButton"
-        android:layout_width="220dp"
-        android:layout_height="54dp"
-        android:background="@color/colorPrimaryDark"
-        android:onClick="walletButtonClicked"
-        android:text="@string/searchWallet"
-        android:textColor="@android:color/background_light"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="440dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/accountHeaderTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
