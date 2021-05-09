@@ -1,7 +1,3 @@
 <resources>
-    <string name="app_name">Algo Wallet</string>
-    <string name="addAccount">Add Account</string>
-    <string name="recoverAccount">Recover with passphrase</string>
-    <string name="searchWallet">Lookup Wallet</string>
-    <string name="algoAddress">Algo Wallet Address</string>
+    <string name="app_name">Newton Algodroid</string>
 </resources>
