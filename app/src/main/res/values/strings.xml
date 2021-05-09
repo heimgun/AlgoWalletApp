@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Newton Algodroid</string>
+    <string name="app_name">Algodroid</string>
 
     <!-- Accounts page -->
     <string name="stats_title">Statistics</string>

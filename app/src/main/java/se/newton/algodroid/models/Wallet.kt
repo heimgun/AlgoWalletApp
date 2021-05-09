@@ -1,4 +1,4 @@
-package com.example.newtonalgodroid.models
+package se.newton.algodroid.models
 
 // TODO change Wallet.amount to a list of WalletAssets
 // TODO add a list of wallet transactions

@@ -1,4 +1,4 @@
-package com.example.newtonalgodroid
+package se.newton.algodroid
 
 import org.junit.Test
 
